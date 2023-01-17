@@ -43,6 +43,7 @@ The following packages were useful in order to make the project work:
 - threading.
     - This module can be used to execute tasks concurrently. 
 - matplotlib
+- seaborn
 
 
 ## Structure of the code
