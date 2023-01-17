@@ -1,5 +1,7 @@
 # real-estate-price-prediction
 
+# PART I: Collecting data
+
 ## Description
 The goal of this project was to collect information from the [immoweb website](https://www.immoweb.be/en/search/house/for-sale?countries=BE&page=1&orderBy=relevance). We had to gather information about at least 10,000 properties all over Belgium and create a CSV file with the following columns.
 * __Locality__
@@ -112,3 +114,79 @@ We did also check the range of price across all the properties and the boxplot (
 
 <img title="Boxplot price range" alt="boxplot" src="./images/boxplot.png">
 --
+
+# PART II: Analysing data
+
+This part consists of three steps. We will first have a look on our dataset and clean it where possible (Step 1). Then we'll analyse our data (step 2) and finally we'll interprate the data according to two cases and additional questions that were asked as part of this project (step 3). 
+
+### Step 1: Cleaning the data 
+
+A cleaned dataset is a dataset that doesn't contain any duplicates, is blank spaces or error-free. With this in mind, we've done some analysis. A first look on our dataset showed us that there were some columns and rows that could be deleted. It's also advised to check the types for each column and to adjust if needed. 
+
+We're glad that we took the time to analyse our data as we've found that the sale prices of auctions or life annuity sales were also included in our dataset. Those sale prices are not final and can be deleted. You see that this will otherwise lead to unreasonable prices as below: 
+
+<img title="Lowest price" alt="price" src="./images/minprice.png">
+
+
+
+### Step 2 : Analysing the data
+
+Now that the data has been collected and cleaned, it is time for the analysis. In this part we'll formulate an answer to the following questions: 
+
+- How many rows and columns are left in our dataframe. 
+- How many qualitative and quantitative variables are there?
+- What the correlation between the variables.
+- Which variables have the greatest/lowest influence on the price?
+- What is the percentage of missing values per column?
+
+As the main objective of this project (in a later phase) is to predict prices, it is important to already note the variables that have an influence on the price. The following bar chart visualizes the importance of each variable on the price 
+
+<img title="Correlation with price" alt="correlation" src="./images/correlation.png">
+
+
+### Step 3 : Data Interpretation
+
+In this part we'll further analyse the data according to the following questions (3.1) as part of this challenge and according to our own case study (3.2).  After analysing the data, we'll interpret the results and present the output. We will provide some answers and visualization to those questions but this will be very brief as a illustration purpose. The output and explanation is given in (./data_acquisition/data_visualization.ipynb). We will provide some answers here too as an illustration. 
+
+
+
+#### 3.1: Questions
+- Plot the outliers.  
+- Represent the number of properties according to their surface using a histogram.
+
+<img title="Number of properties according to their surface area" alt="surface area" src="./images/surface_area.png">
+
+- What are the **most/less** expensive municipalities in Belgium/Wallonia/Flanders? (Average price, median price, price per square meter)
+
+For this question we had to link the postal codes with the region. In a later analysis for the case study in 3.2 we will also need to divide the dataset by province. We've hence written two functions to link the postal codes with the region and province associated with it. Important to note is that Brussels is considered as a province too. In a next phase we would advise to use one function instead of two. This can be done by using a dictionary. It is also a good idea to work with a dataframe which also includes the cities.
+
+We saw that the highest price per square meter is located in the cities with postal codes 8620 (Nieuwpoort), 3000 (Leuven), 1933 (Zaventem), 8301(Knokke-Heist) and 8300(Knokke). Those are municipalities that are coveted by investors as they want to buy and rent for profit. The difference between Knokke and other cities are remarkable and hence need further investigation to see if there are any errors in the dataset.
+
+The less expensive municipalities are the cities with the following postal codes 5550(Alle), 7804(Aat), 6666(Houffalize), 6741(Étalle) and 5576(Beauraing). 
+
+For the most and less expensive city according to the price per square meter, we have also calculated the mean and median. We'll show this for Belgium. 
+
+<img title="Most and less expensive cities in Belgium" alt="belgium prices" src="./images/tabel_belgium.png">
+
+#### 3.2: Case 
+
+As part of the project, we were asked to deliver meaningful insights about the dataset. We have therefore worked on 2 questions for the following clients: 
+- Client 1 is a (apartment) builder from Wallonia who's building apartment blocks and selling each unit. The builder is doubting wether to install an USA-kitchen and if this will have an effect on the house prices. 
+- Client 2 is an investor from Flanders who's interested in buying properties which are in need of restoration. He's wondering in which provinces he can have a better profit margin after renovating it. 
+
+##### Case 1: Analyzing the price difference between USA kitchens and normal kitchens in apartments in Wallonia. 
+
+We have divided the dataset according to the following kitchen types: USA-kitchen and normal kitchen in Wallonia. The following graph shows that there are differences notable in the price according to the kitchen type. For both kitchen types we've also checked other variables like living area and those were comparable. 
+
+<img title="Apartment prices according to kitchen type" alt="belgium prices" src="./images/Boxplot_kitchen.png">
+
+
+##### Case 2: Analyzing the price difference between several properties in the provinces of Flanders according to their state.
+
+After comparing the price from new properties and properties to restore (in each province), we see that in Limburg and West Flanders there's a good profit margin.  
+
+<img title="Prices according to state of property in each province" alt="province prices" src="./images/price_state.png">
+
+## End of case study. Both clients were happy with the analysis.
+
+
