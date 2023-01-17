@@ -139,7 +139,7 @@ Now that the data has been collected and cleaned, it is time for the analysis. I
 - What the correlation between the variables.
 - Which variables have the greatest/lowest influence on the price?
 - What is the percentage of missing values per column?
-- 
+
 As one of the key goals of this project is to make predictions about prices, it is crucial to identify the variables that have an impact on the price. The bar chart below illustrates the significance of each variable in determining the price.
 
 <img title="Correlation with price" alt="correlation" src="./images/correlation.png">
