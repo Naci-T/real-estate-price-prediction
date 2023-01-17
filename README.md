@@ -118,7 +118,7 @@ We did also check the range of price across all the properties and the boxplot (
 
 # PART II: Analysing data
 
-The process is divided into three stages. Initially, we will review and clean the dataset as necessary (Stage 1). Next, we will conduct an analysis of the data (Stage 2), and finally, we will interpret the results based on the two scenarios and additional questions specified in this project (Stage 3).
+The process is divided into three stages. Initially, we will review and clean the dataset as necessary (Stage 1). Next, we will conduct an analysis of the data (Stage 2), and finally, we will interpret the results based on the two scenarios and additional questions specified in this project (Stage 3). We will only provide a summary of the answers and visualizations in this README, however, a more detailed explanation and output can be found in [data_visualization.ipynb](./data_visualization/data_visualization.ipynb).
 
 ### Step 1: Cleaning the data 
 
@@ -147,7 +147,7 @@ As one of the key goals of this project is to make predictions about prices, it 
 
 ### Step 3 : Data Interpretation
 
-In this section, we will conduct a deeper analysis of the data by addressing the questions in (3.1) as part of this challenge and by using our own case study (3.2). After completing the analysis, we will interpret the results and present the findings. We will provide a summary of the answers and visualizations here, however, a more detailed explanation and output can be found in [data_visualization.ipynb](./data_visualization/data_visualization.ipynb). Additionally, we will provide some additional answers and illustrations here as well.
+In this section, we will conduct a deeper analysis of the data by addressing the questions in (3.1) as part of this challenge and by using our own case study (3.2). After completing the analysis, we will interpret the results and present the findings. Additionally, we will provide some additional answers and illustrations here as well.
 
 
 #### 3.1: Questions
