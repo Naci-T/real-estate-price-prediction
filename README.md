@@ -118,13 +118,13 @@ We did also check the range of price across all the properties and the boxplot (
 
 # PART II: Analysing data
 
-This part consists of three steps. We will first have a look on our dataset and clean it where possible (Step 1). Then we'll analyse our data (step 2) and finally we'll interprate the data according to two cases and additional questions that were asked as part of this project (step 3). 
+The process is divided into three stages. Initially, we will review and clean the dataset as necessary (Stage 1). Next, we will conduct an analysis of the data (Stage 2), and finally, we will interpret the results based on the two scenarios and additional questions specified in this project (Stage 3).
 
 ### Step 1: Cleaning the data 
 
-A cleaned dataset is a dataset that doesn't contain any duplicates, is blank spaces or error-free. With this in mind, we've done some analysis. A first look on our dataset showed us that there were some columns and rows that could be deleted. It's also advised to check the types for each column and to adjust if needed. 
+A cleaned dataset is one that is free of duplicates, blank spaces, and errors. With this in mind, we have conducted an analysis. An initial review of our dataset revealed that certain columns and rows could be removed. It is also recommended to verify the data types for each column and make adjustments as necessary.
 
-We're glad that we took the time to analyse our data as we've found that the sale prices of auctions or life annuity sales were also included in our dataset. Those sale prices are not final and can be deleted. You see that this will otherwise lead to unreasonable prices as below: 
+We are pleased that we invested the time to analyze our data, as we discovered that the sale prices for auctions or life annuity sales were also included in our dataset. Those sale prices are not final and can be removed. This will prevent any inaccuracies in the data, such as unreasonable prices as below.
 
 <img title="Lowest price" alt="price" src="./images/minprice.png">
 
@@ -139,16 +139,15 @@ Now that the data has been collected and cleaned, it is time for the analysis. I
 - What the correlation between the variables.
 - Which variables have the greatest/lowest influence on the price?
 - What is the percentage of missing values per column?
-
-As the main objective of this project (in a later phase) is to predict prices, it is important to already note the variables that have an influence on the price. The following bar chart visualizes the importance of each variable on the price 
+- 
+As one of the key goals of this project is to make predictions about prices, it is crucial to identify the variables that have an impact on the price. The bar chart below illustrates the significance of each variable in determining the price.
 
 <img title="Correlation with price" alt="correlation" src="./images/correlation.png">
 
 
 ### Step 3 : Data Interpretation
 
-In this part we'll further analyse the data according to the following questions (3.1) as part of this challenge and according to our own case study (3.2).  After analysing the data, we'll interpret the results and present the output. We will provide some answers and visualization to those questions but this will be very brief as a illustration purpose. The output and explanation is given in [data_visualization.ipynb](./data_visualization/data_visualization.ipynb). We will provide some answers here too as an illustration. 
-
+In this section, we will conduct a deeper analysis of the data by addressing the questions in (3.1) as part of this challenge and by using our own case study (3.2). After completing the analysis, we will interpret the results and present the findings. We will provide a summary of the answers and visualizations here, however, a more detailed explanation and output can be found in [data_visualization.ipynb](./data_visualization/data_visualization.ipynb). Additionally, we will provide some additional answers and illustrations here as well.
 
 
 #### 3.1: Questions
@@ -159,35 +158,37 @@ In this part we'll further analyse the data according to the following questions
 
 - What are the **most/less** expensive municipalities in Belgium/Wallonia/Flanders? (Average price, median price, price per square meter)
 
-For this question we had to link the postal codes with the region. In a later analysis for the case study in 3.2 we will also need to divide the dataset by province. We've hence written two functions to link the postal codes with the region and province associated with it. Important to note is that Brussels is considered as a province too. In a next phase we would advise to use one function instead of two. This can be done by using a dictionary. It is also a good idea to work with a dataframe which also includes the cities.
+In this question, we needed to link postal codes with the corresponding region and province. In a later stage of our case study (3.2), we also had to divide the dataset by province. To do this, we created two functions that link the postal codes with their associated region and province. It's important to note that Brussels is considered a province as well. For future analysis, it would be more efficient to use one function that utilizes a dictionary. It's also recommended to work with a dataframe that includes city information.
 
-We saw that the highest price per square meter is located in the cities with postal codes 8620 (Nieuwpoort), 3000 (Leuven), 1933 (Zaventem), 8301(Knokke-Heist) and 8300(Knokke). Those are municipalities that are coveted by investors as they want to buy and rent for profit. The difference between Knokke and other cities are remarkable and hence need further investigation to see if there are any errors in the dataset.
+From the analysis, we found that the highest price per square meter is found in cities with postal codes 8620 (Nieuwpoort), 3000 (Leuven), 1933 (Zaventem), 8301 (Knokke-Heist) and 8300 (Knokke). These municipalities are popular among investors looking to buy and rent properties for profit. The difference in prices between Knokke and other cities is notable and requires further investigation to determine if there are any errors in the dataset.
 
-The less expensive municipalities are the cities with the following postal codes 5550(Alle), 7804(Aat), 6666(Houffalize), 6741(Étalle) and 5576(Beauraing). 
+On the other hand, the least expensive municipalities are the cities with postal codes 5550 (Alle), 7804 (Aat), 6666 (Houffalize), 6741 (Étalle) and 5576 (Beauraing).
 
-For the most and less expensive city according to the price per square meter, we have also calculated the mean and median. We'll show this for Belgium. 
+To further understand the prices, we also calculated the mean and median prices per square meter for the most and least expensive cities in Belgium.
 
 <img title="Most and less expensive cities in Belgium" alt="belgium prices" src="./images/tabel_belgium.png">
 
+This analysis can also be repeated for each region and province. 
+
 #### 3.2: Case 
 
-As part of the project, we were asked to deliver meaningful insights about the dataset. We have therefore worked on 2 questions for the following clients: 
-- Client 1 is a (apartment) builder from Wallonia who's building apartment blocks and selling each unit. The builder is doubting wether to install an USA-kitchen and if this will have an effect on the house prices. 
-- Client 2 is an investor from Flanders who's interested in buying properties which are in need of restoration. He's wondering in which provinces he can have a better profit margin after renovating it. 
+As part of the project, we were tasked with providing valuable insights about the dataset. We have therefore focused on two questions for the following clients:
+
+- Client 1 is an apartment builder from Wallonia who is constructing apartment buildings and selling each unit. The builder is uncertain about whether to include an American-style kitchen in the units and if this will affect the house prices.
+- Client 2 is an investor from Flanders who is interested in purchasing properties that need restoration. He is curious about which provinces would provide a higher profit margin after renovation.
 
 ##### Case 1: Analyzing the price difference between USA kitchens and normal kitchens in apartments in Wallonia. 
 
-We have divided the dataset according to the following kitchen types: USA-kitchen and normal kitchen in Wallonia. The following graph shows that there are differences notable in the price according to the kitchen type. For both kitchen types we've also checked other variables like living area and those were comparable. 
+We separated the dataset into two categories based on kitchen type: American-style kitchen and normal kitchen in Wallonia. The graph below illustrates that there are notable differences in prices based on the kitchen type. We also verified other variables such as living area, and they were similar between the two kitchen types.
 
 <img title="Apartment prices according to kitchen type" alt="belgium prices" src="./images/Boxplot_kitchen.png">
 
-
 ##### Case 2: Analyzing the price difference between several properties in the provinces of Flanders according to their state.
 
-After comparing the price from new properties and properties to restore (in each province), we see that in Limburg and West Flanders there's a good profit margin.  
+After analyzing the prices of new properties and properties that need restoration in each province, we found that there is a good profit margin for properties in Limburg and West Flanders.  
 
 <img title="Prices according to state of property in each province" alt="province prices" src="./images/price_state.png">
 
-## End of case study. Both clients were happy with the analysis.
+## This concludes our case study. Both clients were satisfied with the analysis we provided.
 
 
