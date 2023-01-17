@@ -146,7 +146,7 @@ As the main objective of this project (in a later phase) is to predict prices, i
 
 ### Step 3 : Data Interpretation
 
-In this part we'll further analyse the data according to the following questions (3.1) as part of this challenge and according to our own case study (3.2).  After analysing the data, we'll interpret the results and present the output. We will provide some answers and visualization to those questions but this will be very brief as a illustration purpose. The output and explanation is given in [data_visualization.ipynb](./data_visualization.ipynb). We will provide some answers here too as an illustration. 
+In this part we'll further analyse the data according to the following questions (3.1) as part of this challenge and according to our own case study (3.2).  After analysing the data, we'll interpret the results and present the output. We will provide some answers and visualization to those questions but this will be very brief as a illustration purpose. The output and explanation is given in [data_visualization.ipynb](./data_visualization/data_visualization.ipynb). We will provide some answers here too as an illustration. 
 
 
 
