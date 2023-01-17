@@ -158,7 +158,7 @@ In this section, we will conduct a deeper analysis of the data by addressing the
 
 - What are the **most/less** expensive municipalities in Belgium/Wallonia/Flanders? (Average price, median price, price per square meter)
 
-In this question, we needed to link postal codes with the corresponding region and province. In a later stage of our case study (3.2), we also had to divide the dataset by province. To do this, we created two functions that link the postal codes with their associated region and province. It's important to note that Brussels is considered a province as well. For future analysis, it would be more efficient to use one function that utilizes a dictionary. It's also recommended to work with a dataframe that includes city information.
+In this question, we needed to link postal codes with the corresponding region and province. In a later stage of our case study (3.2), we also had to divide the dataset by province. To do this, we created two functions that link the postal codes with their associated region and province. It's important to note that Brussels was considered a province as well. For future analysis, it would be more efficient to use one function that utilizes a dictionary. It's also recommended to work with a dataframe that includes city information.
 
 From the analysis, we found that the highest price per square meter is found in cities with postal codes 8620 (Nieuwpoort), 3000 (Leuven), 1933 (Zaventem), 8301 (Knokke-Heist) and 8300 (Knokke). These municipalities are popular among investors looking to buy and rent properties for profit. The difference in prices between Knokke and other cities is notable and requires further investigation to determine if there are any errors in the dataset.
 
