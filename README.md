@@ -222,6 +222,10 @@ We have a model with an accuracy of 75%.
 For this project, we have tested several models such as linear regression, gradient boosting etc. in combination with some adjustments in the preprocessed data and selected features. We have repeated the steps several times and came to the conclustion that preprocessing the data will have a huge effect on the results and that it will also take the most of the time. 
  
 
+Limitations and to work further: 
+- Change other models 
+- Cleaning again and more efficiently. Try using mean value or other justifications
+
 
 
 
