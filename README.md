@@ -196,15 +196,13 @@ After analyzing the prices of new properties and properties that need restoratio
 Both clients were satisfied with the analysis we provided, last week. The companies  asked us to create a Machine Learning model to predict prices on Belgium's real estate sales. We are hence working further on the same dataset that was previously scraped from immoweb.
 
 The steps that we'll follow are as follows:
-- Step 1: Data preprocessing
+- Step 1: Data cleaning and preprocessing
 
 In this step we'll make sure to work with a clean dataset and preprocess the data. We have added an additional column with provinces and changed the column 'fully_equipped_kitchen' in a True or False value. 
 
-- Step 2: Data formatting
+- Step 2: Model selection and model training
 
 In this step we'll format it for for machine learning by dividing our dataset for training and testing.
-
-- Step 3: Model selection
 
 We have choosen the Random Forest regression: 
   
@@ -212,9 +210,7 @@ We have choosen the Random Forest regression:
              'Garden_Area','Surface_area_of_the_plot_of_land', State_of_the_building'
   -Target: 'Price'
 
-- Step 4: Model training
-
-- Step 5: Model evaluation 
+- Step 3: Model evaluation 
 
 We have a model with an accuracy of 75%. 
 
