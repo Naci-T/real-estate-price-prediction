@@ -13,8 +13,7 @@ The goal of this project was to collect information from the [immoweb website](h
 
 The dataset had to be clean in the sense of recording only numerical values. 
 
-This code for this part consists of three different parts. The first step of the program is responsible for gathering all the necessary links that will be used for data collection. The second part of the program uses the collected links to scrape information from those webpages. The final step of the program is to "clean" the data that has been collected. This includes removing duplicates and formatting data to have (mainly) numerical values. However, the data is not processed to remove any errors or inconsistencies. 
-
+This code for this part consists of three different parts: 
 ### 1) Collecting the links
 The aim of the [links_collection.ipynb](./data_acquisition/links_collection.ipynb) file is to collect the links of all houses and apartment for sale on the immoweb website. In practice, the house and apartment sections are done in parallel (using threads) and both are following the same algorithm:
 * __first__, The algorithm goes through the 333 pages that are available:
@@ -106,18 +105,18 @@ Each step is explained in more detail in the notebook [model_training.ipynb](./m
 __Usage__: It is necessary to repeat steps 1-3 multiple times in order to achieve an optimal accuracy outcome. Keep in mind that the majority of the time will be spent on preprocessing the data.
 
 
-# Future work: 
+# Future work 
 
 There is always opportunity for enhancement! In a future project, we will make the following improvements.
 
-Part I: Collecting the data
+Part I. Collecting the data
 
 - Adding an additional variable 'end_pagenumber' such that users won't have to change this number manually when scraping the links. 
 
 Part II. Analysing data
 
-- Adding colours to graphs 
-- Making more use of seaborn library as it has easier commands to read
+- Adding colours to graphs. 
+- Making more use of seaborn library as it has easier commands to read.
 
 Part III. Machine Learning
 
@@ -126,8 +125,8 @@ Part III. Machine Learning
 - Trying several other models which we couldn't implement now. 
 
 
-# Timeline: 
+# Timeline and contributors
 
-* I. Collecting the data: 4 days
-* II. Analysing data: 3 days
-* III. Machine Learning: 4 days 
+* I. Collecting the data: 4 days (teamwork: Sacha, Sébastien and Naci)
+* II. Analysing data: 3 days (Naci)
+* III. Machine Learning: 4 days (Naci)
