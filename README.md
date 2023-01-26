@@ -1,37 +1,13 @@
 # real-estate-price-prediction
 
-# PART I: Collecting data
+# Part I: Collecting data
 
 ## Description Part I
 The goal of this project was to collect information from the [immoweb website](https://www.immoweb.be/en/search/house/for-sale?countries=BE&page=1&orderBy=relevance). We had to gather information about at least 10,000 properties all over Belgium and create a CSV file with the following columns.
 
-* __Locality__, __Type of property__,__Subtype of property__,__Price__,__Type of sale__,__Number of rooms__,__Living Area__,__Fully equipped kitchen__,__Furnished__ __Open fire__, __Terrace__,__Terrace_Area__, __Garden__ (Yes/No), __Garden_Area__, __Surface of the land__, __Surface area of the plot of land__, __Number of facades__, __Swimming pool__, __State of the building__.
+* __Locality__, __Type of property__, __Subtype of property__, __Price__, __Type of sale__, __Number of rooms__, __Living Area__, __Fully equipped kitchen__, __Furnished__, __Open fire__, __Terrace__, __Terrace_Area__, __Garden__, __Garden_Area__, __Surface of the land__, __Surface area of the plot of land__, __Number of facades__, __Swimming pool__, __State of the building__.
 
 The dataset had to be clean in the sense of recording only numerical values. 
-
-## Installation
-
-The following packages were useful in order to make the project work: 
-
-ALL PARTS 
-
-- json (built-in); 
-    - This library provides a representation of the JavaScript Object Notation (JSON) with support for parsing, printing, and manipulating JSON values. 
-- pandas (pip install pandas);
-    - This library offers data structure and operations for data analysis and manipulation.
-- bs4 (pip install bs4);
-    - BeautifulSoup is a library for getting data out of XML and HTML files. The library's folder is bs4. 
-- selenium (pip install selenium);
-    - This library is useful when getting the content of dynamic web pages which rely on Javascript. It is useful when information is accessible by clicking on buttons. 
-- threading.
-    - This module can be used to execute tasks concurrently. 
-- matplotlib
-- seaborn
-
-PART II
-
-PART III
-
 
 ## Structure of the code: PART I 
 

@@ -1,0 +1,25 @@
+## Installation
+
+The following packages were useful in order to make the project work: 
+
+All parts: 
+
+- json (built-in); 
+    - This library provides a representation of the JavaScript Object Notation (JSON) with support for parsing, printing, and manipulating JSON values. 
+- pandas (pip install pandas);
+    - This library offers data structure and operations for data analysis and manipulation.
+- bs4 (pip install bs4);
+    - BeautifulSoup is a library for getting data out of XML and HTML files. The library's folder is bs4. 
+- selenium (pip install selenium);
+    - This library is useful when getting the content of dynamic web pages which rely on Javascript. It is useful when information is accessible by clicking on buttons. 
+- threading.
+    - This module can be used to execute tasks concurrently. 
+- matplotlib
+- seaborn (pip install seaborn)
+- sklearn (pip install sklearn)
+
+For the Machine Learning part we have imported the following modules:
+
+- from sklearn.model_selection import train_test_split 
+- from sklearn.metrics import mean_absolute_error
+- from sklearn.metrics import r2_score
