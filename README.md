@@ -1,6 +1,6 @@
 # real-estate-price-prediction
 
-In this project, we aim to predict house prices using various features such as location, number of rooms, living are etc.
+In this project, we aim to predict house prices using various features such as location, number of rooms, living area etc.
 
 The project is divided into three main parts: data collecting, data analysis and model building. It includes several notebooks that explain each step of the process in detail. Additionally you can find a requirements document with the installation process and a timeline at the end of this readme. Happy coding! 
 
@@ -13,9 +13,7 @@ The goal of this project was to collect information from the [immoweb website](h
 
 The dataset had to be clean in the sense of recording only numerical values. 
 
-## Structure of the code: PART I 
-
-Our program consists of three different steps. The first step of the program is responsible for gathering all the necessary links that will be used for data collection. The second part of the program uses the collected links to scrape information from those webpages. The final step of the program is to "clean" the data that has been collected. This includes removing duplicates and formatting data to have (mainly) numerical values. However, the data is not processed to remove any errors or inconsistencies. 
+This code for this part consists of three different parts. The first step of the program is responsible for gathering all the necessary links that will be used for data collection. The second part of the program uses the collected links to scrape information from those webpages. The final step of the program is to "clean" the data that has been collected. This includes removing duplicates and formatting data to have (mainly) numerical values. However, the data is not processed to remove any errors or inconsistencies. 
 
 ### 1) Collecting the links
 The aim of the [links_collection.ipynb](./data_acquisition/links_collection.ipynb) file is to collect the links of all houses and apartment for sale on the immoweb website. In practice, the house and apartment sections are done in parallel (using threads) and both are following the same algorithm:
@@ -37,7 +35,7 @@ In this csv file, each line represents a new house/apartment. The column names a
 
 We have splitted the links (20000 in total) in three to collect the information in parallel. The reason for this was to minimize the risk of being blocked by the immoweb website if we'd have used 'real' concurrency. 
 
-__usage__: This (shared) workprocess can take up to 4 hours when divided between two or more computers. When there's a problem while running, the code will store the scraped information under a CSV file. 
+__Usage__: This (shared) workprocess can take up to 4 hours when divided between two or more computers. When there's a problem while running, the code will store the scraped information under a CSV file. 
 
 
 ### 3) Cleaning the data
@@ -50,7 +48,7 @@ After cleaning the data, the dataframe looks as follows:
 
 --
 
-# PART II: Analysing data
+# Part II: Analysing data
 
 ## Description Part II
 
@@ -88,44 +86,29 @@ As part of the project, we were tasked with providing valuable insights about th
 - Client 1 is an apartment builder from Wallonia who is constructing apartment buildings and selling each unit. The builder is uncertain about whether to include an American-style kitchen in the units and if this will affect the house prices.
 - Client 2 is an investor from Flanders who is interested in purchasing properties that need restoration. He is curious about which provinces would provide a higher profit margin after renovation.
 
-At the end of the notebook we have hence analyses the following cases: 
-##### Case 1: Analyzing the price difference between USA kitchens and normal kitchens in apartments in Wallonia. 
 
-##### Case 2: Analyzing the price difference between several properties in the provinces of Flanders according to their state.
-
-
-# PART III: Machine Learning Model 
+# Part III: Machine Learning Model 
 
 ## Description Part III
 
-Both clients were satisfied with the analysis we provided, last week. The companies  asked us to create a Machine Learning model to predict prices on Belgium's real estate sales. We are hence working further on the same dataset that was previously scraped from immoweb.
-We'll follow 3 steps below, which are briefly explained below. You can find the code in [model_training.ipynb](./data_model_training/data_model_training.ipynb).
+The clients were pleased with the analysis we provided last week, and have asked us to create a machine learning model to predict real estate prices in Belgium. We will be using the same dataset that was previously scraped from immoweb. We will be following these three steps:
 
-The steps that we'll follow are as follows:
-- Step 1: Data cleaning and preprocessing
+- Step 1: Data cleaning and preprocessing:
+  We will ensure that we are working with a clean dataset and preprocess the data. We have added an additional column for provinces and changed the column 'fully_equipped_kitchen' to a True or False value.
+- Step 2: Model selection and training:
+  *We will format the data for machine learning by dividing our dataset for training and testing.
+  *We have chosen to use the Random Forest regression model, with features such as 'Postal_code', 'Subtype_of_property', 'Price', 'Number_of_rooms', 'Living_Area','Terrace_Area', 'Garden_Area','Surface_area_of_the_plot_of_land', State_of_the_building' and the target being 'Price'.
+- Step 3: Model evaluation:
+  *We have achieved an accuracy of 75% with our model, by testing different models and making adjustments to the preprocessed data and features. This step includes functions and graphs to evaluate the model. We will repeat these steps multiple times to improve the accuracy of the model, noting that preprocessing the data will take the most time.
 
-In this step we'll make sure to work with a clean dataset and preprocess the data. We have added an additional column with provinces and changed the column 'fully_equipped_kitchen' in a True or False value. 
 
-- Step 2: Model selection and model training
 
-In this step we'll format it for for machine learning by dividing our dataset for training and testing.
-
-We have choosen the Random Forest regression: 
-  
-  -Features: 'Postal_code', 'Subtype_of_property', 'Price', 'Number_of_rooms', 'Living_Area','Terrace_Area', 
-             'Garden_Area','Surface_area_of_the_plot_of_land', State_of_the_building'
-  -Target: 'Price'
-
-- Step 3: Model evaluation 
-
-We have a model with an accuracy of 75%. In order to get this result, we have tested several models such as linear regression, gradient boosting etc. in combination with some adjustments in the preprocessed data and selected features. This part of the project includes some functions and graphs to evaluate the model.
-
-__Usage_: Steps 1 to 3 need to be repeated several times in order to achieve a good accuracy result. Remind that preprocessing the data will take the most of the time. 
+__Usage__: It is necessary to repeat steps 1-3 multiple times in order to achieve an optimal accuracy outcome. Keep in mind that the majority of the time will be spent on preprocessing the data.
 
 
 # Future work: 
 
-There's always room for improvement! In a future project we'll do the following adjustments. 
+There is always opportunity for enhancement! In a future project, we will make the following improvements.
 
 Part I: Collecting the data
 
