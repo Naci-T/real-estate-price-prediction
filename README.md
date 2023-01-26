@@ -101,8 +101,7 @@ The clients were pleased with the analysis we provided last week, and have asked
 - Step 3: Model evaluation:
 	- We have achieved an accuracy of 75% with our model, by testing different models and making adjustments to the preprocessed data and features. This step includes functions and graphs to evaluate the model. We will repeat these steps multiple times to improve the accuracy of the model, noting that preprocessing the data will take the most time.
 
-
-Each step is detailed in the notebook [model_training.ipynb](./dmodel_training/model_training.ipynb)
+Each step is explained in more detail in the notebook [model_training.ipynb](./model_training/model_training.ipynb). 
 
 __Usage__: It is necessary to repeat steps 1-3 multiple times in order to achieve an optimal accuracy outcome. Keep in mind that the majority of the time will be spent on preprocessing the data.
 
