@@ -20,7 +20,7 @@ The aim of the [links_collection.ipynb](./data_acquisition/links_collection.ipyn
 * __then__, scrapes these pages to get all the links it contains
 * __lastly__, This part creates a csv file called [links.csv](./data_acquisition/links.csv) which stores all the links collected.
 
-__Usage__: This process takes up to 1 hour. Remember to change the number of pages manually
+__Usage__: This process takes up to 1 hour. Remember to change the number of pages manually.
 
 ### 2) Scraping all the links
 For all the links that are stored in the links.csv file, [house_scrapping.ipynb](./data_acquisition/house_scrapping.ipynb) will:
@@ -124,6 +124,9 @@ Part III. Machine Learning
 - Tying different approaches to handle the missing values in our columns. 
 - Trying several other models which we couldn't implement now. 
 
+General: 
+
+- Formatting the code with library black
 
 # Timeline and contributors
 
