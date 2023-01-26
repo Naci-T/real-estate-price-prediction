@@ -1,6 +1,8 @@
 # real-estate-price-prediction
 
-In this project, we aim to predict house prices using various features such as location, number of rooms etc. The project is divided into three main parts: data collecting, data analysis and model building. The project includes several notebooks that explain each step of the process in detail. Additionally you can find a requirements document with the installation process and a timeline at the end of this readme. Happy coding! 
+In this project, we aim to predict house prices using various features such as location, number of rooms, living are etc.
+
+The project is divided into three main parts: data collecting, data analysis and model building. It includes several notebooks that explain each step of the process in detail. Additionally you can find a requirements document with the installation process and a timeline at the end of this readme. Happy coding! 
 
 # Part I: Collecting data
 
@@ -19,10 +21,9 @@ Our program consists of three different steps. The first step of the program is 
 The aim of the [links_collection.ipynb](./data_acquisition/links_collection.ipynb) file is to collect the links of all houses and apartment for sale on the immoweb website. In practice, the house and apartment sections are done in parallel (using threads) and both are following the same algorithm:
 * __first__, The algorithm goes through the 333 pages that are available:
 * __then__, scrapes these pages to get all the links it contains
-* <img title="333 pages" alt="immoweb picture" src="./images/333_pages.png">
 * __lastly__, This part creates a csv file called [links.csv](./data_acquisition/links.csv) which stores all the links collected.
 
-__Usage__: This process takes up to 1 hour. In order to collect the links of all houses and apartments for sale, we had a look on the website of immoweb and found 333 pages for each property type. This is something you need to check and change manually when running the program. You can also add an additional variable 'end_pagenumber' and scrape this information from the website. 
+__Usage__: This process takes up to 1 hour. Remember to change the number of pages manually
 
 ### 2) Scraping all the links
 For all the links that are stored in the links.csv file, [house_scrapping.ipynb](./data_acquisition/house_scrapping.ipynb) will:
@@ -36,7 +37,7 @@ In this csv file, each line represents a new house/apartment. The column names a
 
 We have splitted the links (20000 in total) in three to collect the information in parallel. The reason for this was to minimize the risk of being blocked by the immoweb website if we'd have used 'real' concurrency. 
 
-__usage__: This (shared) workprocess can take up to 4 hours when divided between two or more computers. When there's a problem while running, the code will store the scraped information under a CSV file. The program will continue working with a new CSV file. You can add your name to distinguish between team members.
+__usage__: This (shared) workprocess can take up to 4 hours when divided between two or more computers. When there's a problem while running, the code will store the scraped information under a CSV file. 
 
 
 ### 3) Cleaning the data
@@ -98,6 +99,7 @@ At the end of the notebook we have hence analyses the following cases:
 ## Description Part III
 
 Both clients were satisfied with the analysis we provided, last week. The companies  asked us to create a Machine Learning model to predict prices on Belgium's real estate sales. We are hence working further on the same dataset that was previously scraped from immoweb.
+We'll follow 3 steps below, which are briefly explained below. You can find the code in [model_training.ipynb](./data_model_training/data_model_training.ipynb).
 
 The steps that we'll follow are as follows:
 - Step 1: Data cleaning and preprocessing
@@ -123,8 +125,22 @@ __Usage_: Steps 1 to 3 need to be repeated several times in order to achieve a g
 
 # Future work: 
 
-There's always room for improvement. In a future project we'll reconsider our datapreprocessing part to see if there can be an improvement
-if we handle missing values by different other methods. Furthermore we'd like to try some other models which we had in mind but couldn't implement yet. 
+There's always room for improvement! In a future project we'll do the following adjustments. 
+
+Part I: Collecting the data
+
+- Adding an additional variable 'end_pagenumber' such that users won't have to change this number manually when scraping the links. 
+
+II. Analysing data
+
+- Adding colours to graphs 
+- Making more use of seaborn library as it has easier commands to read
+
+III. Machine Learning
+
+- Trying different approach on datapreprocess in order to get better accuracy. 
+- Tying different approaches to handle the missing values in our columns. 
+- Trying several other models which we couldn't implement now. 
 
 
 # Timeline: 

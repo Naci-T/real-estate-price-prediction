@@ -2,8 +2,6 @@
 
 The following packages were useful in order to make the project work: 
 
-All parts: 
-
 - json (built-in); 
     - This library provides a representation of the JavaScript Object Notation (JSON) with support for parsing, printing, and manipulating JSON values. 
 - pandas (pip install pandas);
@@ -17,9 +15,5 @@ All parts:
 - matplotlib
 - seaborn (pip install seaborn)
 - sklearn (pip install sklearn)
-
-For the Machine Learning part we have imported the following modules:
-
-- from sklearn.model_selection import train_test_split 
-- from sklearn.metrics import mean_absolute_error
-- from sklearn.metrics import r2_score
+    - This library provides a selection of efficient tools for machine learning. 
+  
