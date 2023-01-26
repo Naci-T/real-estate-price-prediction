@@ -94,12 +94,12 @@ As part of the project, we were tasked with providing valuable insights about th
 The clients were pleased with the analysis we provided last week, and have asked us to create a machine learning model to predict real estate prices in Belgium. We will be using the same dataset that was previously scraped from immoweb. We will be following these three steps:
 
 - Step 1: Data cleaning and preprocessing:
-  We will ensure that we are working with a clean dataset and preprocess the data. We have added an additional column for provinces and changed the column 'fully_equipped_kitchen' to a True or False value.
+	- We will ensure that we are working with a clean dataset and preprocess the data. We have added an additional column for provinces and changed the column 'fully_equipped_kitchen' to a True or False value.
 - Step 2: Model selection and training:
-  *We will format the data for machine learning by dividing our dataset for training and testing.
-  *We have chosen to use the Random Forest regression model, with features such as 'Postal_code', 'Subtype_of_property', 'Price', 'Number_of_rooms', 'Living_Area','Terrace_Area', 'Garden_Area','Surface_area_of_the_plot_of_land', State_of_the_building' and the target being 'Price'.
+	- We will format the data for machine learning by dividing our dataset for training and testing.
+	- We have chosen to use the Random Forest regression model, with features such as 'Postal_code', 'Subtype_of_property', 'Price', 'Number_of_rooms', 'Living_Area','Terrace_Area', 'Garden_Area','Surface_area_of_the_plot_of_land', State_of_the_building' and the target being 'Price'.
 - Step 3: Model evaluation:
-  *We have achieved an accuracy of 75% with our model, by testing different models and making adjustments to the preprocessed data and features. This step includes functions and graphs to evaluate the model. We will repeat these steps multiple times to improve the accuracy of the model, noting that preprocessing the data will take the most time.
+	- We have achieved an accuracy of 75% with our model, by testing different models and making adjustments to the preprocessed data and features. This step includes functions and graphs to evaluate the model. We will repeat these steps multiple times to improve the accuracy of the model, noting that preprocessing the data will take the most time.
 
 
 
@@ -114,12 +114,12 @@ Part I: Collecting the data
 
 - Adding an additional variable 'end_pagenumber' such that users won't have to change this number manually when scraping the links. 
 
-II. Analysing data
+Part II. Analysing data
 
 - Adding colours to graphs 
 - Making more use of seaborn library as it has easier commands to read
 
-III. Machine Learning
+Part III. Machine Learning
 
 - Trying different approach on datapreprocess in order to get better accuracy. 
 - Tying different approaches to handle the missing values in our columns. 
