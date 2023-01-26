@@ -1,5 +1,7 @@
 # real-estate-price-prediction
 
+In this project, we aim to predict house prices using various features such as location, number of rooms etc. The project is divided into three main parts: data collecting, data analysis and model building. The project includes several notebooks that explain each step of the process in detail. Additionally you can find a requirements document with the installation process and a timeline at the end of this readme. Happy coding! 
+
 # Part I: Collecting data
 
 ## Description Part I
@@ -26,7 +28,6 @@ __Usage__: This process takes up to 1 hour. In order to collect the links of all
 For all the links that are stored in the links.csv file, [house_scrapping.ipynb](./data_acquisition/house_scrapping.ipynb) will:
 * open the link
 * scrape the available information
-* <img title="one page example" alt="immoweb picture2" src="./images/infos.png">
 * store all the collected information into different csv files called all_info_TeamMember1_1-5000.csv, all_info_TeamMember1_1-10000.csv, all_info_TeamMember2_10000-15000.csv, etc. These files will be merged in the next step of the program. 
 
 In this csv file, each line represents a new house/apartment. The column names are given in the Description section. In this part a special type of multithreading was implemented, which is called teamwork: 
@@ -115,7 +116,19 @@ We have choosen the Random Forest regression:
 
 - Step 3: Model evaluation 
 
-We have a model with an accuracy of 75%. 
+We have a model with an accuracy of 75%. In order to get this result, we have tested several models such as linear regression, gradient boosting etc. in combination with some adjustments in the preprocessed data and selected features. This part of the project includes some functions and graphs to evaluate the model.
+
+__Usage_: Steps 1 to 3 need to be repeated several times in order to achieve a good accuracy result. Remind that preprocessing the data will take the most of the time. 
 
 
-For this project, we have tested several models such as linear regression, gradient boosting etc. in combination with some adjustments in the preprocessed data and selected features. We have repeated the steps several times and came to the conclustion that preprocessing the data will have a huge effect on the results and that it will also take the most of the time. 
+# Future work: 
+
+There's always room for improvement. In a future project we'll reconsider our datapreprocessing part to see if there can be an improvement
+if we handle missing values by different other methods. Furthermore we'd like to try some other models which we had in mind but couldn't implement yet. 
+
+
+# Timeline: 
+
+* I. Collecting the data: 4 days
+* II. Analysing data: 3 days
+* III. Machine Learning: 4 days 
