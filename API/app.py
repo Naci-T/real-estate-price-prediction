@@ -4,7 +4,7 @@ import pandas as pd
 app = Flask(__name__)
 
 #import the model
-model = pickle.load(open('model/rf_model.pickle', 'rb'))
+model = pickle.load(open('model/rf_model.pkl', 'rb'))
 
 @app.route('/', methods=['GET'])  
 @app.route("/home")
