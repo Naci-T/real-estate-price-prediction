@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<body>
+  <h4>
+      Please enter the details of your property: 
+  </h4>
+</body>
+
+
+<form action='/submit', method='POST'>
+
+
+  Enter postal code: <input type = "postal" name = "postal" />
+  <br><br>
+  Enter Property type: <input type = "sub" name = "sub" />
+  <br><br>
+  Enter Number of rooms: <input type = "nr" name = "nr" />
+  <br><br>
+  Enter Living area: <input type = "larea" name = "larea" />
+  <br><br>
+  Enter Terrace area: <input type = "tarea" name = "tarea" />
+  <br><br>
+  Enter Garden area: <input type = "garea" name = "garea" />
+  <br><br>
+  Surface area of land: <input type = "sarea" name = "sarea" />
+  <br><br>
+  Enter State of property: <input type = "stop" name = "stop" />
+  <br><br>
+<br><br>
+<input type="submit" value="submit"/>
+</form>
+{% endblock %}
