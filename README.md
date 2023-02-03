@@ -111,9 +111,9 @@ __Usage__: It is necessary to repeat steps 1-3 multiple times in order to achiev
 
 ## Description Part IV
 
-In this part we had to deploy a web service which can be accessed from anywghere in the world.
+In this part we had to deploy a web service which can be accessed from anywhere in the world.
 
-We have have create an API which is hosted on [immopredict.onrender.com](https://immopredict.onrender.com) and uses a Random Forest Regression model to predict the price of a house or apartment based on the inputs given.
+We have created an API which is hosted on [immopredict.onrender.com](https://immopredict.onrender.com) and uses a Random Forest Regression model to predict the price of a house or apartment based on the inputs given.
 
 ## Routes
 The following routes are available for this API:
