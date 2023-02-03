@@ -11,22 +11,29 @@
 <form action='/submit', method='POST'>
 
 
-  Enter postal code: <input type = "postal" name = "postal" />
+  Enter postal code: <input type = "number" name = "postal" min="1000" max="9992"/>
   <br><br>
-  Enter Property type: <input type = "sub" name = "sub" />
+  Enter Property type:   
+  <select name="sub">
+    {{ selector2 }}
+  </select> 
   <br><br>
-  Enter Number of rooms: <input type = "nr" name = "nr" />
+  Enter Number of rooms: <input type = "number" name = "nr" min="0" max="10"/>
   <br><br>
-  Enter Living area: <input type = "larea" name = "larea" />
+  Enter Living area (in m²): <input type = "number" name = "larea" min="0" max="5000"/>
   <br><br>
-  Enter Terrace area: <input type = "tarea" name = "tarea" />
+  Enter Terrace area (in m²): <input type = "number" name = "tarea" min="0" max="1000"/>
   <br><br>
-  Enter Garden area: <input type = "garea" name = "garea" />
+  Enter Garden area: <input type = "number" name = "garea" min="0" max="50000"/>
   <br><br>
-  Surface area of land: <input type = "sarea" name = "sarea" />
+  Surface area of land: <input type = "number" name = "sarea" min="0" max="100000"/>
   <br><br>
-  Enter State of property: <input type = "stop" name = "stop" />
+  Enter State of property:
+  <select name="stop">
+    {{ selector }}
+  </select> 
   <br><br>
+
 <br><br>
 <input type="submit" value="submit"/>
 </form>
