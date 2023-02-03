@@ -109,7 +109,9 @@ __Usage__: It is necessary to repeat steps 1-3 multiple times in order to achiev
 
 ## Description Part IV
 
-This API is hosted on [immopredict.onrender.com](https://immopredict.onrender.com) and uses a Random Forest Regression model to predict the price of a house or apartment based on the inputs given.
+In this part we had to deploy a web service which can be accessed from anywghere in the world.
+
+We have have create an API which is hosted on [immopredict.onrender.com](https://immopredict.onrender.com) and uses a Random Forest Regression model to predict the price of a house or apartment based on the inputs given.
 
 ## Routes
 The following routes are available for this API:
@@ -128,6 +130,8 @@ The data expected in the form on the `/prediction` route is:
 - Garden area (optional): A numerical value (in m²) representing the garden area of the property (0-50000).
 - Surface area of land (optional): A numerical value (in m²) representing the surface area of the land (0-100000).
 - State of property (mandatory): A selection from a predefined list of options.
+
+
 
 ## Output
 The output of the `/submit` route in case of success is a dictionary response with two fields:
