@@ -107,7 +107,7 @@ __Usage__: It is necessary to repeat steps 1-3 multiple times in order to achiev
 
 # Part IV: API Deployment
 
-<img title="Price prediction" alt="immopredict website" src="./images/homepage.png">
+<img title="Price prediction" alt="immopredict website" src="./images/homepage.jpg">
 
 ## Description Part IV
 
