@@ -2,7 +2,7 @@
 
 In this project, we aim to predict house prices using various features such as location, number of rooms, living area etc.
 
-The project is divided into three main parts: data collecting, data analysis and model building. It includes several notebooks that explain each step of the process in detail. Additionally you can find a requirements document with the installation process and a timeline at the end of this readme. Happy coding! 
+The project is divided into four main parts: data collecting, data analysis, model building and deployment. It includes several notebooks that explain each step of the process in detail. Additionally you can find a requirements document with the installation process and a timeline at the end of this readme. Happy coding! 
 
 # Part I: Collecting data
 
