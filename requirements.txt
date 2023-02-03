@@ -16,4 +16,8 @@ The following packages were useful in order to make the project work:
 - seaborn (pip install seaborn)
 - sklearn (pip install sklearn)
     - This library provides a selection of efficient tools for machine learning. 
+- flask
+    - Web framework that lets you develop web applications easily.
+- pickle
+    - This module implements serialization protocol, which provides an ability to save and later load Python objects. 
   
