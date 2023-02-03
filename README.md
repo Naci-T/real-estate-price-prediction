@@ -120,7 +120,7 @@ The following routes are available for this API:
 - `/` and `/home` with GET method: This route is used to access the home page of the API.
 - `/prediction` with GET method: This route is used to access the form to input the details of a house to get its predicted price.
 - `/logout` with GET method: This route is used to logout from the API.
-- `/submit` with POST method: This route is used to submit the details of a house and receive its predicted price as a JSON response.
+- `/submit` with POST method: This route is used to submit the details of a house and receive its predicted price.
 
 ## Input
 The data expected in the form on the `/prediction` route is:
@@ -163,9 +163,9 @@ Part III. Machine Learning
 
 Part IV. API Deployment
 
-- Collecting and returning data in jSON format 
-- Including maybe the range of the price prediction as we know that there's a mean error value. 
-- In case of error, an appropriate error message and status code should be returned.
+- Collecting and returning data in jSON format.
+- In case of error, an appropriate error message and status code should be returned. 
+- Including the range of the price prediction as we know that there's a mean error value. 
 
 
 General: 
