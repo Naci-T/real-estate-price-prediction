@@ -109,7 +109,7 @@ __Usage__: It is necessary to repeat steps 1-3 multiple times in order to achiev
 
 ## Description Part IV
 
-This API is hosted on [immoprediction.onrender.com](https://immoprediction.onrender.com) and uses a Random Forest Regression model to predict the price of a house or apartment based on the inputs given.
+This API is hosted on [immopredict.onrender.com](https://immopredict.onrender.com) and uses a Random Forest Regression model to predict the price of a house or apartment based on the inputs given.
 
 ## Routes
 The following routes are available for this API:
@@ -120,21 +120,19 @@ The following routes are available for this API:
 
 ## Input
 The data expected in the form on the `/prediction` route is:
-- Postal code (mandatory, integer)
-- Subtype of property (mandatory, integer)
-- Number of rooms (mandatory, integer)
-- Living area (mandatory, integer)
-- Terrace area (mandatory, integer)
-- Garden area (mandatory, integer)
-- Surface area of the plot of land (mandatory, integer)
-- State of the building (mandatory, integer)
+- Postal code (mandatory): A 5-digit numerical value (1000-9992).
+- Property type (mandatory): A selection from a predefined list of options.
+- Number of rooms (mandatory): A numerical value (0-10).
+- Living area (mandatory): A numerical value (in m²) representing the living area of the property (0-5000).
+- Terrace area (optional): A numerical value (in m²) representing the terrace area of the property (0-1000).
+- Garden area (optional): A numerical value (in m²) representing the garden area of the property (0-50000).
+- Surface area of land (optional): A numerical value (in m²) representing the surface area of the land (0-100000).
+- State of property (mandatory): A selection from a predefined list of options.
 
 ## Output
 The output of the `/submit` route in case of success is a dictionary response with two fields:
 - `prediction`: The predicted price of the house
 - `status_code`: HTTP status code (200)
-
-In case of error, an appropriate error message and status code will be returned.
 
 
 
@@ -161,8 +159,7 @@ Part IV. API Deployment
 
 - Collecting and returning data in jSON format 
 - Including maybe the range of the price prediction as we know that there's a mean error value. 
-- Adjusting the issue that the website is working slow
-- Working on error handling
+- In case of error, an appropriate error message and status code should be returned.
 
 
 General: 
