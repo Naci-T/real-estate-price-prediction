@@ -171,3 +171,4 @@ General:
 * I. Collecting the data: 4 days (teamwork: Sacha, Sébastien and Naci)
 * II. Analysing data: 3 days (Naci)
 * III. Machine Learning: 4 days (Naci)
+* IV. API Deployment: 5 days (Naci)
