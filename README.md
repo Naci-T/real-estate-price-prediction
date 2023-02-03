@@ -166,6 +166,7 @@ Part IV. API Deployment
 - Collecting and returning data in jSON format.
 - In case of error, an appropriate error message and status code should be returned. 
 - Including the range of the price prediction as we know that there's a mean error value. 
+- The website is too slow.
 
 
 General: 
