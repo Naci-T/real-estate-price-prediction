@@ -105,6 +105,39 @@ Each step is explained in more detail in the notebook [model_training.ipynb](./m
 __Usage__: It is necessary to repeat steps 1-3 multiple times in order to achieve an optimal accuracy outcome. Keep in mind that the majority of the time will be spent on preprocessing the data.
 
 
+# Part IV: API Deployment
+
+## Description Part IV
+
+This API is hosted on [immoprediction.onrender.com](https://immoprediction.onrender.com) and uses a Random Forest Regression model to predict the price of a house or apartment based on the inputs given.
+
+## Routes
+The following routes are available for this API:
+- `/` and `/home` with GET method: This route is used to access the home page of the API.
+- `/prediction` with GET method: This route is used to access the form to input the details of a house to get its predicted price.
+- `/logout` with GET method: This route is used to logout from the API.
+- `/submit` with POST method: This route is used to submit the details of a house and receive its predicted price as a JSON response.
+
+## Input
+The data expected in the form on the `/prediction` route is:
+- Postal code (mandatory, integer)
+- Subtype of property (mandatory, integer)
+- Number of rooms (mandatory, integer)
+- Living area (mandatory, integer)
+- Terrace area (mandatory, integer)
+- Garden area (mandatory, integer)
+- Surface area of the plot of land (mandatory, integer)
+- State of the building (mandatory, integer)
+
+## Output
+The output of the `/submit` route in case of success is a JSON response with two fields:
+- `prediction`: The predicted price of the house
+- `status_code`: HTTP status code (200)
+
+In case of error, an appropriate error message and status code will be returned.
+
+
+
 # Future work 
 
 There is always opportunity for enhancement! In a future project, we will make the following improvements.
@@ -123,6 +156,12 @@ Part III. Machine Learning
 - Trying different approach on datapreprocess in order to get better accuracy. 
 - Tying different approaches to handle the missing values in our columns. 
 - Trying several other models which we couldn't implement now. 
+
+Part IV. API Deployment µ
+
+- Collecting and returning data in jSON format 
+- Including maybe the range of the price prediction as we know that there's a mean error value. 
+
 
 General: 
 
