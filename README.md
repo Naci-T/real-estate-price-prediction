@@ -130,7 +130,7 @@ The data expected in the form on the `/prediction` route is:
 - State of the building (mandatory, integer)
 
 ## Output
-The output of the `/submit` route in case of success is a JSON response with two fields:
+The output of the `/submit` route in case of success is a dictionary response with two fields:
 - `prediction`: The predicted price of the house
 - `status_code`: HTTP status code (200)
 
@@ -157,10 +157,12 @@ Part III. Machine Learning
 - Tying different approaches to handle the missing values in our columns. 
 - Trying several other models which we couldn't implement now. 
 
-Part IV. API Deployment µ
+Part IV. API Deployment
 
 - Collecting and returning data in jSON format 
 - Including maybe the range of the price prediction as we know that there's a mean error value. 
+- Adjusting the issue that the website is working slow
+- Working on error handling
 
 
 General: 
