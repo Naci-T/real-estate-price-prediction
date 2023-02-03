@@ -107,6 +107,8 @@ __Usage__: It is necessary to repeat steps 1-3 multiple times in order to achiev
 
 # Part IV: API Deployment
 
+<img title="Price prediction" alt="immopredict website" src="./images/homepage.png">
+
 ## Description Part IV
 
 In this part we had to deploy a web service which can be accessed from anywghere in the world.
@@ -122,7 +124,7 @@ The following routes are available for this API:
 
 ## Input
 The data expected in the form on the `/prediction` route is:
-- Postal code (mandatory): A 5-digit numerical value (1000-9992).
+- Postal code (mandatory): A 4-digit numerical value (1000 - 9992).
 - Property type (mandatory): A selection from a predefined list of options.
 - Number of rooms (mandatory): A numerical value (0-10).
 - Living area (mandatory): A numerical value (in m²) representing the living area of the property (0-5000).
